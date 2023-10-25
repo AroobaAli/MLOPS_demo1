@@ -10,18 +10,18 @@ pipeline {
 
         stage('Install Requirements') {
             steps {
-                echo 'hello world'
+                bat 'pip install -r requirements.txt'
             }
         }
         
 
-        stage('Groovy'){
-            steps {
-                script {
-                    t = load 'task7.groovy'
-                    t.testfunc('production')
-                }
-            }
-        }
+        // stage('Groovy'){
+        //     steps {
+        //         script {
+        //             t = load 'task7.groovy'
+        //             t.testfunc('production')
+        //         }
+        //     }
+        // }
     }
 }
